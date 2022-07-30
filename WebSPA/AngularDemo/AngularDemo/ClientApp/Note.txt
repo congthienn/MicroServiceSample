@@ -1,0 +1,45 @@
+- Module in Angular: https://viblo.asia/p/hieu-ve-angular-modules-ngmodule-va-scope-cua-no-naQZRLJm5vx
+- Angular Advanced: https://blog.angular-university.io/angular-advanced-course/ 
+					https://www.webagesolutions.com/blog/advanced-components-concepts-in-angular
+- Basic Angular: https://angular.io/start
+- Template: https://material.angular.io/
+
+
+- Build and run a basic Angular application:
+	+ Install angular/cli: npm install -g @angular/cli
+	+ Create angular application: ng new my-app
+
+- Command:
+	+ Create component : ng generate component name --module app
+	+ Create service: ng generate service name
+- Module
+- *.component.ts => data to *.component.html
+- *ngFor
+- *ngIf
+- click
+- @Input
+- @Injectable: DI
+- OnInit
+- AppRoutingModule (redirect): ng generate module app-routing --flat --module=app
+
+- Router: https://angular.io/guide/router-tutorial-toh and https://angular.io/guide/router 
+
+	+ Create module and children router: ng generate module name --flat --routing
+
+- Define module : https://angular.io/guide/architecture-modules
+
+    + Create module: ng generate module name --flat
+
+	Note:  --flat :Puts the file in src/app instead of its own folder.
+		 --module app :Tells the CLI to register it in the imports array of the AppModule.
+
+- <router-outlet></router-outlet>
+- routerLink
+- Transforming Data Using Pipes
+- Tap? Benefit
+- Form : https://angular.io/guide/forms
+- ngModel: Map data
+- Auto refresh after update data: Observable - Refresh a Component From Another
+	+ Subject: https://rxjs.dev/guide/subject
+	
+Build app using realtime: https://www.c-sharpcorner.com/article/real-time-angular-11-application-with-signalr-and-net-5/

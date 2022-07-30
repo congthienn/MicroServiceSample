@@ -1,0 +1,52 @@
+.container_user{
+    margin-top: 20px;
+    width: 450px;
+    padding: 10px 30px;
+    background-color: #e8e8e8;
+    height:220px;
+    border-radius:5px;
+}
+.item{
+    padding: 5px 0;
+    font-size: 18px;
+}
+/* AppComponent's private CSS styles */
+h1 {
+    margin-bottom: 0;
+  }
+  nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #e8e8e8;
+    color: #3d3d3d;
+    border-radius: 4px;
+    font-size: 17px;
+  }
+  
+  nav a:hover {
+    color: white;
+    background-color: #42545C;
+  }
+  nav a.active {
+    background-color: black;
+  }
+input{
+  border: 1px solid grey;
+  padding:5px 5px 4px 5px;
+  font-size:17px;
+  margin-left: 5px;
+  width: 350px;
+  border-radius: 4px;
+}
+input:focus{
+  outline: none;
+}   
+nav a{
+  cursor: pointer;
+}
+.label{
+  width: 80px;
+  display: inline-block;
+}

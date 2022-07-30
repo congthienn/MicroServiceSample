@@ -1,0 +1,62 @@
+*Note:
+  - Document files docker-*.yml : https://github.com/dotnet-architecture/eShopOnContainers/wiki/Docker-compose-deployment-files.
+  -.env config DNS name of host docker and URL of the Azure Storage. Question: How to set hostname in host file of computer ?
+  - When run docker-compose up :  docker-compose.yml will run.
+Overview of the application code: https://github.com/dotnet-architecture/eShopOnContainers/wiki/Explore-the-code
+Setup project: https://github.com/dotnet-architecture/eShopOnContainers/wiki/Windows-setup#configure-docker
+*Build APIGateway: 
+-API Gateway in eShopOnContainer https://github.com/dotnet-architecture/eShopOnContainers/wiki/API-gateways
+-What is APIGateway? Definition - benefits - problem Link: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern#:~:text=NET%20Core%20lightweight%20API%20Gateway,deploy%20on%20Linux%20or%20Windows.
+-What is microsoftservice? Definition - Benefit  Link: https://docs.microsoft.com/en-us/azure/architecture/microservices/
+
+-http://payment-api/hc ? effect? Quản lý API sống hay chết 
+--webshoppingagg 5121 ?
+-Event Bus ? RabbitMQ ?
+
+-Run WebMVC:
+	Step 1: http://localhost:57425/c/api/v1/catalog/items?pageIndex=0&pageSize=9
+	Step 2: http://localhost:57425/c/api/v1/catalog/catalogBrands
+	Step 3: http://localhost:57425/c/api/v1/catalog/catalogTypes
+	Add catalog: http://localhost:57425/api/v1/Basket
+
+
+-Can't run WebMVC of eShopOnContainer on Visual Studio? 
+-CatalogGrpc.cs ?? why is there?
+-IdentityAPI: Port 5100 success - other port :  Failed 
+-IdentiyAPI : Link https://github.com/dotnet-architecture/eShopOnContainers/wiki/Identity-Server
+-OrderAPI truy cập thông quan IdentityAPI 
+-What is gRPC ?  effect?
+-Implement API Gateway with Ocelet: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/implement-api-gateways-with-ocelot
+-Note: Run sql_data -> run rabbitmq -> run API 
+
+-token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjZCN0FDQzUyMDMwNUJGREI0RjcyNTJEQUVCMjE3N0NDMDkxRkFBRTEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJhM3JNVWdNRnY5dFBjbExhNnlGM3pBa2ZxdUUifQ.eyJuYmYiOjE2NTA2ODU0MzcsImV4cCI6MTY1MDY5MjYzNywiaXNzIjoibnVsbCIsImF1ZCI6WyJvcmRlcnMiLCJiYXNrZXQiLCJ3ZWJzaG9wcGluZ2FnZyIsIm9yZGVycy5zaWduYWxyaHViIl0sImNsaWVudF9pZCI6Im12YyIsInN1YiI6IjUyMDc0ZWI0LTRjZTItNGUxYS05ODViLTMyYWRmYTg3NTkxMyIsImF1dGhfdGltZSI6MTY1MDY4NTQzNSwiaWRwIjoibG9jYWwiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW1vdXNlckBtaWNyb3NvZnQuY29tIiwidW5pcXVlX25hbWUiOiJkZW1vdXNlckBtaWNyb3NvZnQuY29tIiwibmFtZSI6IkRlbW9Vc2VyIiwibGFzdF9uYW1lIjoiRGVtb0xhc3ROYW1lIiwiY2FyZF9udW1iZXIiOiI0MDEyODg4ODg4ODgxODgxIiwiY2FyZF9ob2xkZXIiOiJEZW1vVXNlciIsImNhcmRfc2VjdXJpdHlfbnVtYmVyIjoiNTM1IiwiY2FyZF9leHBpcmF0aW9uIjoiMTIvMjUiLCJhZGRyZXNzX2NpdHkiOiJSZWRtb25kIiwiYWRkcmVzc19jb3VudHJ5IjoiVS5TLiIsImFkZHJlc3Nfc3RhdGUiOiJXQSIsImFkZHJlc3Nfc3RyZWV0IjoiMTU3MDMgTkUgNjFzdCBDdCIsImFkZHJlc3NfemlwX2NvZGUiOiI5ODA1MiIsImVtYWlsIjoiZGVtb3VzZXJAbWljcm9zb2Z0LmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVfbnVtYmVyIjoiMTIzNDU2Nzg5MCIsInBob25lX251bWJlcl92ZXJpZmllZCI6ZmFsc2UsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJvcmRlcnMiLCJiYXNrZXQiLCJ3ZWJzaG9wcGluZ2FnZyIsIm9yZGVycy5zaWduYWxyaHViIl0sImFtciI6WyJwd2QiXX0.C2D5xuol0UE-dhmsxDnxxuek_03t8537YRQmiha48WjsPCfqgIi7EZVw2QOwqSRXf65ki9wNh1dlUkZ_JAL7LGQGzmzhiQ1kkCgJ29QNdc_eLewFzpr5uBsP8x2qzWx7t6XTPaeArDAq1bDvEznIGKqHLIlpOEeWhECqXhpio_EeO695nN-4ySgLlnzuEbC4tGZKZOJoeYCnlYx7n7LC-MZGFNEmkMenreaCD_zSpLJ3Jq1ofnS0jv_XulKX0guTn8shfCNMjOz-v_MAd0ePPXuAWf4xeMLFNaR8RDd1ZUyzWmTsP_A9zMGmUwsVF82gOJFM9Ozxlf_WJVzDAonQkA
+
+
++ Cache?? Database??=> localhost 
++ Rabbitmq(Cách xài)?? Tải về
+
+UserId demo : 42b1459c-cbff-4af9-87a2-a6952f69d0b7
+
+configuration.json in D:\eShopOnContainers\src\ApiGateways\Mobile.Bff.Shopping\apigw
+
+-Build cache - setting up Redis in Docker Link: - https://www.c-sharpcorner.com/article/caching-mechanism-in-asp-net-core/
+								- https://medium.com/idomongodb/installing-redis-server-using-docker-container-453c3cfffbdf
+	Step 1: Pull docker Redis image from docker hub: docker pull redis
+	Step 2: Run redis: docker run --name Basketdata -p 6379:6379 -d redis (6379:6379 can change)
+	Step 3: Start the container: docker start Basketdata (Check by command: docker ps)
+
+-Build rabbitmq in docker:
+
+	ESHOP_SERVICE_BUS_USERNAME=rabbit
+	ESHOP_SERVICE_BUS_PASSWORD=rabbitp
+
+	Step 1: Start dcoker
+	Step 2: docker pull rabbitmq:3-management
+	Step 3: docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+
+-Build rabbitmq in Windows
+
+	Step 1: Download Erlang and Rabbitmq (https://www.rabbitmq.com/install-windows.html)
+	Step 2: Open RabbitMQ Command Prompt 
+	Step 3: Run command: rabbitmq-plugins enable rabbitmq_management
+	Step 4: Access link: http://localhost:15672/ (Username: guest - Password: guest)

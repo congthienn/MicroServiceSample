@@ -1,0 +1,32 @@
+
+<div style="width: 510px;">
+  <nav style="display: flex;column-gap:10px;">
+    <a (click)="updateUser()">Update</a>
+    <a (click)="goBack()">Back</a>
+  </nav>
+  <!-- If else template -->
+  <div *ngIf="update;else showUser">
+    <div *ngIf="user" class="container_user" style="height:280px">
+      <h1>User Information</h1> 
+      
+      <div class="item"><label class="label" for="name">Fullname:</label> <input id="name" #name type="text" [(ngModel)]="user.name"></div>
+      <div class="item"><label for="" class="label">Email:</label> {{user.email}}</div>
+      <div class="item"><label for="phone" class="label">Phone:</label> <input id="phone" #phone type="text" [(ngModel)]="user.phone"></div>
+      <div class="item"><label for="address" class="label">Address:</label> <input id="address" #address type="text" [(ngModel)]="user.address"></div>
+    
+      <nav style="display: flex;column-gap:10px;">
+        <a (click)="updateData(name.value,phone.value,address.value)" style="background-color: #1976d2;color: white;">Save</a>
+        <a (click)="cancel()" style="background-color: rgb(220, 18, 18); color: rgb(255, 255, 255);">Cancel</a>
+      </nav>
+    </div>
+  </div>
+  <ng-template #showUser> 
+    <div *ngIf="user" class="container_user">
+        <h1>User Information</h1>   
+        <div class="item"><span class="label">Fullname:</span> {{user.name}}</div>
+        <div class="item"><span class="label">Email:</span> {{user.email}}</div>
+        <div class="item"><span class="label">Phone:</span>  {{user.phone}}</div>
+        <div class="item"><span class="label">Address:</span> {{user.address}}</div>
+    </div>
+  </ng-template>
+</div>

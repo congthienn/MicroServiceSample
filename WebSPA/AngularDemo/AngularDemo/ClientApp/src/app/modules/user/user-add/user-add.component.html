@@ -1,0 +1,17 @@
+<nav style="display: flex;column-gap:10px;">
+  <a (click)="goBack()">Back</a>
+</nav>
+<!-- <app-user></app-user> -->
+<div class="container_user" style="height:330px">
+    <h1>Add new User Information</h1> 
+    
+    <div class="item"><label for="name" class="label">Fullname:</label> <input id="name" [(ngModel)]="user.name" type="text"></div>
+    <div class="item"><label for="email" class="label">Email:</label> <input id="email" [(ngModel)]="user.email" type="email"></div>
+    <div class="item"><label for="password" class="label">Password:</label> <input id="password" [(ngModel)]="user.password" type="password"></div>
+    <div class="item"><label for="phone" class="label">Phone:</label> <input id="phone" [(ngModel)]="user.phone" type="text"></div>
+    <div class="item"><label for="address" class="label">Address:</label> <input id="address" [(ngModel)]="user.address" type="text"></div>
+    <nav style="display: flex;column-gap:10px;">
+      <a (click)="save(user)" style="background-color: #1976d2;color: white;">Save</a>
+      <a (click)="clear()"style="background-color: rgb(220, 18, 18); color: rgb(255, 255, 255);">Refesh</a>
+    </nav>
+</div>  

@@ -1,0 +1,44 @@
+﻿{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/api/v1/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5101
+          }
+        ],
+        "UpstreamPathTemplate": "/c/api/v1/{everything}",
+        "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/v1/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 58017
+          }
+        ],
+        "UpstreamPathTemplate": "/b/api/v1/{everything}",
+        "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/v1/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 55102
+          }
+        ],
+        "UpstreamPathTemplate": "/o/api/v1/{everything}",
+        "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "AdministrationPath": "/administration"
+    }
+}

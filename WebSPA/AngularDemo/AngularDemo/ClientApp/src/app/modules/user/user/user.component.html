@@ -1,0 +1,22 @@
+
+<div style="width: 510px;">
+  <nav style="display: flex;column-gap:10px;">
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/users">Users</a>  
+</nav>
+
+<div style="width: 510px;">
+<h2>My List Users</h2>
+<nav style="display: flex;column-gap:10px;margin-bottom: 10px;">
+  <a routerLink="add">Add user</a>
+</nav>
+<div class="container_user">
+  <div style="margin: auto;">
+    <ul class="heroes">
+      <li *ngFor="let user of users$" style="display: flex;">
+          <a routerLink="detail/{{user.id}}"><span class="badge">{{user.id}}</span><span class="user_name">{{user.name}}</span></a> <button class="delete" (click)="deleteUser(user)" title="Delete user">X</button>
+      </li>
+    </ul>
+  </div>
+</div>
+</div> 

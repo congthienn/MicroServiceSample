@@ -1,0 +1,89 @@
+/* HeroesComponent's private CSS styles */
+.heroes {
+    list-style-type: none;
+    padding: 0;
+    width:400px;
+  }
+  .heroes li {
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+    width: 400px;
+  }
+  /* AppComponent's private CSS styles */ 
+h1 {
+  margin-bottom: 0;
+}
+nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+  font-size:17px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+nav a.active {
+  background-color: black;
+}
+  .heroes li:hover {
+    left: .1em;
+  }
+  .heroes a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    display: block;
+    width: 100%;
+    font-size: 17px;
+  }
+  
+  .heroes a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .heroes a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .heroes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: 0;
+    height: 1.8em;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+    width: 65px;
+  }
+  .delete{
+    cursor: pointer;
+    background-color:rgb(202, 26, 26);
+    border: none;
+    color: white;
+    border-radius: 4px;
+  }
+.user_name{
+  font-weight: 600;
+}
+.container_user{
+  width: 510px;
+  background-color:lightgray;
+  border-radius: 4px; 
+  display: flex;
+}
